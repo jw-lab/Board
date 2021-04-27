@@ -26,7 +26,7 @@
 </div>
 
 <br><br>
-<button id="park">Let's park!!!</button>
+<button onclick="park()" id="park">Let's park!!!</button>
 <i id="icon" class="fas fa-car-side fa-2x"></i>
 
 <div class="parkinglot">
@@ -57,11 +57,15 @@
 
 <!-- 추후 js 파일로 따로 저장 -->
 <script>
-    const button = document.getElementById('park');
+    // const button = document.getElementById('park');
 
-    button.onclick = function () {
-        const car = document.getElementById('icon');
-        console.log(car)
+    // button.onclick = function () {
+    //     const car = document.getElementById('icon');
+    //     console.log(car)
+    // };
+
+    function park(){
+        document.querySelector("#icon").classList.add("park");
     };
 
 </script>

@@ -55,3 +55,8 @@ p{
     margin-left: 3px;
     margin-top: 5px;
 }
+
+.park{
+    transition: 5s;
+    transform: translateX(360px);
+}

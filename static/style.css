@@ -60,3 +60,8 @@ p{
     transition: 5s;
     transform: translateX(360px);
 }
+
+.hidden{
+    font-size: 13px;
+    color: blue;
+}

@@ -30,39 +30,56 @@
             <form action="/parking/" method="POST">
                 {% csrf_token %}
                 <div class="entrance">
-                    <section class="carinfo">
-                        <label for="model">Model: </label>
-                        <input type="text" id="model" name="model" placeholder="Please enter your car model">
-                        <span class="model hidden"></span>
-                
-                        <label for="company">Company: </label>
-                        <input type="text" id="company" name="company" placeholder="Please enter your car brand">
-                        
-                        <br><br>
-                        
-                        <label for="color">Color: </label>
-                        <input type="text" id="color" name="color" placeholder="Please enter your car color">
-                        
-                        <label for="plate">Plate: </label>
-                        <input type="text" id="plate" name="plate" placeholder="Please enter your car number">
-                    </section>
-                
-                    <section class="owner">
-                        <label for="name">Name: </label>
-                        <input type="text" id="name" name="name" placeholder="Please enter your name">
-                
-                        <label for="mobile">Mobile: </label>
-                        <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number">
-                        
-                        <br><br>
-            
-                        <label for="date">Date: </label>
-                        <input type="text" id="date" name="date" title="No need to enter" readonly>
-            
-                        <label for="lot">Lot: </label>
-                        <input type="text" id="lot" name="lot" placeholder="Please enter where you want to park">
-                    </section>
-            
+                    <div class="container">
+                        <section class="carinfo">
+                            <div class="sub-container">
+                                <label for="model">Model: </label>
+                                <input type="text" id="model" name="model" placeholder="Please enter your car model">
+                                <span class="model hidden"></span>
+                            </div>
+                           
+                            <div class="sub-container">
+                                <label for="company">Company: </label>
+                                <input type="text" id="company" name="company" placeholder="Please enter your car brand">
+                            </div>
+                       
+    
+                             <div class="sub-container">
+                                <label for="color">Color: </label>
+                                <input type="text" id="color" name="color" placeholder="Please enter your car color">
+                             </div>
+    
+                            <div class="sub-container">
+                                <label for="plate">Plate: </label>
+                                <input type="text" id="plate" name="plate" placeholder="Please enter your car number">
+                            </div>
+    
+                        </section>
+                    
+                        <section class="owner">
+                            <div class="sub-container">
+                                <label for="name">Name: </label>
+                                <input type="text" id="name" name="name" placeholder="Please enter your name">
+                            </div>
+                            
+                            <div class="sub-container">
+                                <label for="mobile">Mobile: </label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number">
+                            </div>
+    
+                            <div class="sub-container">
+                                <label for="date">Date: </label>
+                                <input type="text" id="date" name="date" title="No need to enter" readonly>
+                            </div>
+                            
+                            <div class="sub-container">
+                                <label for="lot">Lot: </label>
+                                <input type="text" id="lot" name="lot" placeholder="Please enter where you want to park">
+                            </div>
+                            
+                        </section>
+                    </div>
+                    
                     <section class="parkButton">
                         <button type="submit" id="park">Let's park!!!</button>
                         <i id="icon" class="fas fa-car-side fa-2x"></i>

@@ -67,14 +67,15 @@ p{
     justify-content: center;
     align-items: center;
 }
-.carinfo, .owner{
-    flex-basis: 150px;
-    padding: 10px;
-}
 
 input{
     height: 50px;
-    width: 260px;
+    width: 220px;
+    margin: 10px;
+}
+
+label {
+    text-align: right;
 }
 
 .payment{
@@ -95,3 +96,19 @@ input{
     font-size: 13px;
     color: blue;
 }
+
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sub-container {
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    align-items: center;
+}
+

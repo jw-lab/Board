@@ -16,7 +16,7 @@ def parking_view(request):
         parking.lot = request.POST.get('lot')
     
         parking.save()
-        return HttpResponseRedirect('/parking')
+        return HttpResponseRedirect('/')
     else:
         parking_list = Parking.objects.all()
         return render(request,'parkingapp/main.html', context={'parking_list': parking_list})

@@ -19,5 +19,5 @@ from parkingapp.views import parking_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('parking/',parking_view, name='parking_view'),
+    path('',parking_view, name='parking_view'),
 ]

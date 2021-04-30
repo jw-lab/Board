@@ -87,17 +87,6 @@ label {
     width: 520px;
 }
 
-.park{
-    transition: 5s;
-    transform: translateX(360px);
-}
-
-.hidden{
-    font-size: 13px;
-    color: blue;
-}
-
-
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -110,5 +99,14 @@ label {
     display: grid;
     grid-template-columns: 22% 1fr;
     align-items: center;
+}
+
+.submit_icon.js-active{
+    transform: rotate(360deg);
+    transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+    transition-delay: 0.3s;
+    
 }
 

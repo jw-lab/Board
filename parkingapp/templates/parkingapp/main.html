@@ -82,7 +82,8 @@
                     
                     <section class="parkButton">
                         <button type="submit" id="park">Let's park!!!</button>
-                        <i id="icon" class="fas fa-car-side fa-2x"></i>
+                        <span class="submit_icon"><i id="icon" class="fas fa-car-side fa-2x"></i></span>
+                        
                     </section>
                 </div>
             </form>
@@ -112,11 +113,24 @@
 <!-- 추후 js 파일로 따로 저장 -->
 <script>
 // 아이콘 무빙 처리 시작
-    const button = document.getElementById('park');
-    function park(){
+const button = document.getElementById('park');
+
+
+function park(){
         document.querySelector("#icon").classList.add("park");
-    };
-button.addEventListener("mousedown", park);
+};
+
+button.addEventListener('click', e => {
+    let trigger = document.querySelector('.submit_icon');
+    
+    if(!trigger.classList.contains('js-active')){
+        trigger.classList.add('js-active');
+    }
+    else {
+        trigger.classList.remove('js-active');
+    }
+}
+);
 
 //아이콘 무빙 처리 종료
 

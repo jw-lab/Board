@@ -95,20 +95,12 @@
     </div>
 </div>
 
-
-
-
-
-
-
 <!-- 데이터 저장 되는지 확인 용도 -->
 {% if parking_list %}
     {% for Parking in parking_list %}
         {{ Parking.name }}
     {% endfor %}
 {% endif %}
-
-
 
 <!-- 추후 js 파일로 따로 저장 -->
 <script>
@@ -118,7 +110,7 @@ const my_form = document.querySelector("#myForm");
 const my_form_submit_btn = my_form.querySelector("#park");
 const Progress = (evt) => {
   evt.preventDefault(); 
-  document.getElementById('icon').style.transform = "rotate(720deg)";
+  document.getElementById('icon').style.transform = "rotate(360deg)";
   document.getElementById('icon').style.transition = "all 2s";
     
   my_form_submit_btn.disabled = true;
@@ -131,27 +123,6 @@ const Progress = (evt) => {
 my_form.addEventListener("submit", Progress);
 // submit시 자동차 회전 종료
 
-// 아이콘 무빙 처리 시작
-// const button = document.getElementById('park');
-
-
-// function park(){
-//         document.querySelector("#icon").classList.add("park");
-// };
-
-// button.addEventListener('click', e => {
-//     let trigger = document.querySelector('.submit_icon');
-    
-//     if(!trigger.classList.contains('js-active')){
-//         trigger.classList.add('js-active');
-//     }
-//     else {
-//         trigger.classList.remove('js-active');
-//     }
-// }
-// );
-
-//아이콘 무빙 처리 종료
 
 //유효성 검사 시작
 let modelInput = document.querySelector("#model");

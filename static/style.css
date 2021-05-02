@@ -101,12 +101,3 @@ label {
     align-items: center;
 }
 
-.submit_icon.js-active{
-    transform: rotate(360deg);
-    transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: linear;
-    transition-delay: 0.3s;
-    
-}
-

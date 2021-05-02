@@ -32,24 +32,24 @@
                 <div class="entrance">
                     <div class="container">
                         <section class="carinfo">
-                            <div class="sub-container">
+                            <div>
                                 <label for="model">Model: </label>
                                 <input type="text" id="model" name="model" placeholder="Please enter your car model">
                                 <span class="model hidden"></span>
                             </div>
                            
-                            <div class="sub-container">
+                            <div>
                                 <label for="company">Company: </label>
                                 <input type="text" id="company" name="company" placeholder="Please enter your car brand">
                             </div>
                        
     
-                             <div class="sub-container">
+                             <div>
                                 <label for="color">Color: </label>
                                 <input type="text" id="color" name="color" placeholder="Please enter your car color">
                              </div>
     
-                            <div class="sub-container">
+                            <div>
                                 <label for="plate">Plate: </label>
                                 <input type="text" id="plate" name="plate" placeholder="Please enter your car number">
                             </div>
@@ -57,22 +57,22 @@
                         </section>
                     
                         <section class="owner">
-                            <div class="sub-container">
+                            <div>
                                 <label for="name">Name: </label>
                                 <input type="text" id="name" name="name" placeholder="Please enter your name">
                             </div>
                             
-                            <div class="sub-container">
+                            <div>
                                 <label for="mobile">Mobile: </label>
                                 <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number">
                             </div>
     
-                            <div class="sub-container">
+                            <div>
                                 <label for="date">Date: </label>
                                 <input type="text" id="date" name="date" title="No need to enter" readonly value="{{ Parking.date }}">
                             </div>
                             
-                            <div class="sub-container">
+                            <div>
                                 <label for="lot">Lot: </label>
                                 <input type="text" id="lot" name="lot" placeholder="Please enter where you want to park">
                             </div>
@@ -96,11 +96,10 @@
 </div>
 
 <!-- 데이터 저장 되는지 확인 용도 -->
-{% if parking_list %}
-    {% for v in parking_list %}
-        {{ v.date }}
-    {% endfor %}
-{% endif %}
+{% for v in parking_list %}
+    {{ v.date }}
+{% endfor %}
+
 
 <!-- 추후 js 파일로 따로 저장 -->
 <script>

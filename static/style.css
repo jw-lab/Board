@@ -97,7 +97,7 @@ label {
     margin-bottom: 10px;
 }
 
-.sub-container {
+.container div {
     display: grid;
     grid-template-columns: 22% 1fr;
     align-items: center;

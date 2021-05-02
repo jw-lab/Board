@@ -10,11 +10,12 @@ def parking_view(request):
         parking = Parking()
         parking.model = request.POST.get('model')
         parking.name = request.POST.get('name')
+        parking.company = request.POST.get('company')
         parking.color = request.POST.get('color')
         parking.plate = request.POST.get('plate')
         parking.mobile = request.POST.get('mobile')
         parking.lot = request.POST.get('lot')
-    
+
         parking.save()
         return HttpResponseRedirect('/')
     else:

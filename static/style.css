@@ -57,12 +57,11 @@ p{
 
 .bottomLayout{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 65% 35%;
 }
 
 .entrance{
     border: 2px solid tomato;
-    width: auto;
     margin-top: 15px;
     margin-right: 10px;
     padding: 15px;
@@ -70,12 +69,14 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: auto;
 }
 
-input{
+input, select{
     height: 50px;
-    width: 220px;
-    margin: 10px;
+    width: 85%;
+    margin: 5px;
 }
 
 label {
@@ -84,9 +85,7 @@ label {
 
 .payment{
     margin-top: 15px;
-    /* flex 사이 간격 주는 것이 있으면 그걸 적용하자 */
     border: 1px solid black;
-    width: auto;
 }
 
 .container {
@@ -95,10 +94,14 @@ label {
     grid-template-rows: auto;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
+    grid-column-gap: 0;
 }
 
 .container div {
     display: grid;
     grid-template-columns: 22% 1fr;
     align-items: center;
+    width: 100%;
 }
+

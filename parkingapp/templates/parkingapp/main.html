@@ -4,7 +4,13 @@
 
 <div class="layout">
     <div class="menuLayout">
-        메뉴
+        <h1>Welcome to <br> Parking System🔥🔥🔥</h1>
+        <div class="signIn">
+            <h3>Sign in</h3>
+            <button>카카오톡 로그인하기</button>
+            <br>
+            <button>구글 로그인하기</button>
+        </div>
     </div>
     
     <div class="rightLayout">
@@ -46,7 +52,8 @@
     
                              <div>
                                 <label for="color">Color: </label>
-                                <select name="color" id="color">
+                                <select onchange="colorChange()">
+                                    <option value="" selected disabled hidden>Please select your car color</option>
                                     <option value="white">white</option>
                                     <option value="black">black</option>
                                     <option value="gray">gray</option>
@@ -80,7 +87,7 @@
     
                             <div>
                                 <label for="date">Date: </label>
-                                <input type="text" id="date" name="date" title="No need to enter" readonly value="{{ Parking.date }}">
+                                <input type="text" id="date" name="date" title="No need to enter" readonly value="{{ date }}">
                             </div>
                             
                             <div>
@@ -134,29 +141,17 @@ const Progress = (evt) => {
 my_form.addEventListener("submit", Progress);
 // submit시 자동차 회전 종료
 
+//color select 선택 시 icon color 변경
+let selects = document.querySelector("select");
 
-//유효성 검사 시작
-let modelInput = document.querySelector("#model");
-let modelResult = document.querySelector(".model");
-
-function Validate(){
-    let model = document.getElementById('model');
-    let color = document.getElementById('color');
-    let plate = document.getElementById('plate');
-    let name = document.getElementById('name');
-    let mobile = document.getElementById('mobile');
-    let lot = document.getElementById('lot');
-    
-    if (model.value == ""){
-        
-        modelResult.innerHTML = "차 모델명을 입력해주세요"
-        model.focus();
-        return false
-    };
+function colorChange(){
+    let iconColor = selects.value;
+    console.log(iconColor);
+    document.getElementById('icon').style.color = iconColor;
 };
+//color select 선택 시 icon color 변경 종료
 
-modelInput.addEventListener("blur", Validate);
-
+//유효성 검사 관련 시작
 
 </script>
 {% endblock %}

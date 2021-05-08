@@ -11,6 +11,7 @@
 .menuLayout{
     border: 1px solid black;
     margin-right: 10px;
+   
 }
 
 .parkinglot{
@@ -105,3 +106,10 @@ label {
     width: 100%;
 }
 
+h1{
+    text-align: center;
+}
+
+.signIn{
+    border: 2px solid plum;
+}

@@ -16,19 +16,19 @@
     <div class="rightLayout">
         <div class="parkinglot">
             <div class="lotA">
-                <p>A1</p>
-                <P>A2</P>
-                <p>A3</p>
+                <p class="lot">A1</p>
+                <p class="lot">A2</p>
+                <p class="lot">A3</p>
             </div>
             <div class="lotB">
-                <p>B1</p>
-                <P>B2</P>
-                <p>B3</p>
+                <p class="lot">B1</p>
+                <P class="lot">B2</P>
+                <p class="lot">B3</p>
             </div>
             <div class="lotC">
-                <p>C1</p>
-                <P>C2</P>
-                <p>C3</p>
+                <p class="lot">C1</p>
+                <P class="lot">C2</P>
+                <p class="lot">C3</p>
             </div>
         </div>
 
@@ -150,6 +150,24 @@ function colorChange(){
     document.getElementById('icon').style.color = iconColor;
 };
 //color select 선택 시 icon color 변경 종료
+
+//lot click시 background color 변경 시작
+let lots = document.getElementsByClassName("lot");
+
+
+function backcolorChange(){
+    if (this.classList.contains("lot-active")) {
+        this.classList.replace("lot-active", "lot");
+    } else {
+        this.classList.replace("lot", "lot-active");
+    };
+};
+
+for (let i = 0 ; i < lots.length; i++){
+    lots[i].addEventListener("click", backcolorChange);
+};
+//lot click시 background color 변경 종료
+
 
 //유효성 검사 관련 시작
 

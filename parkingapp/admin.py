@@ -3,5 +3,8 @@ from .models import *
 
 # Register your models here.
 
-admin.site.register(Parking)
+@admin.register(Parking)
+class ParkingAdmin(admin.ModelAdmin):
+    list_display = ('model','name','company','color','plate','mobile','lot','date')
+
 

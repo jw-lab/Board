@@ -8,9 +8,7 @@ class Parking(models.Model):
     company = models.CharField(max_length=50,null=True)
     color = models.CharField(max_length=50,null=True)
     plate = models.CharField(max_length=50,null=True)
-    mobile = models.IntegerField(null=True)
+    mobile = models.CharField(max_length=13 null=True)
     lot = models.CharField(max_length=50,null=True)
     date = models.DateTimeField(auto_now_add=True,null=True)
 
-    def __str__(self):
-        return self.name

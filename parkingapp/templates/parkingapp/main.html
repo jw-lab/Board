@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="bottomLayout">
+        <!-- <div class="bottomLayout">
             <form action="" method="POST" id="myForm">
                 {% csrf_token %}
                 <div class="entrance">
@@ -98,6 +98,7 @@
                             
                         
                     </div>
+        
                     
                     <section class="parkButton">
                         <button type="submit" id="park">Let's park!!!</button>
@@ -106,18 +107,83 @@
                     </section>
                 </div>
             </form>
-    
+            
+            
             <div class="payment">
                 결제관련
             </div>
+        </div> -->
+
+        <div class="bottomLayout">
+            <form action="" method="POST" id="myForm">
+                {% csrf_token %}
+                <div class="entrance">            
+                    <div class="container">
+                        <section class="carinfo">
+                            <div>
+                                <label for="model">Model: </label>
+                                    {{ form.model }}
+                                <span class="model hidden"></span>
+                            </div>
+                           
+                            <div>
+                                <label for="company">Company: </label>
+                                    {{ form.company }}
+                            </div>
+                       
+    
+                            <div>
+                                <label for="color">Color: </label>
+                                    {{ form.color }}
+                             </div>
+    
+                            <div>
+                                <label for="plate">Plate: </label>
+                                    {{ form.plate }}
+                            </div>
+    
+                        </section>
+                    
+                        <section class="owner">
+                            <div>
+                                <label for="name">Name: </label>
+                                    {{ form.name }}
+                            </div>
+                            
+                            <div>
+                                <label for="mobile">Mobile: </label>
+                                    {{ form.mobile }}                            
+                            </div>
+                            
+                            <div>
+                                <label for="lot">Lot: </label>
+                                    {{ form.lot }}
+                            </div>
+
+                            <div>
+                                <label for="date">Date: </label>
+                                <input type="text" id="date" name="date" title="No need to enter" readonly value="{{ date }}">
+                            </div>
+                        </section>
+                            
+                        
+                    </div>
+                    <section class="parkButton">
+                        <button type="submit" id="park">Let's park!!!</button>
+                        <span class="submit_icon"><i id="icon" class="fas fa-car-side fa-2x"></i></span>
+                        
+                    </section>
+                </div>
+            </form>
+
+            <div class="payment">
+                결제관련
+            </div>
+
         </div>
+        
     </div>
 </div>
-
-<!-- 데이터 저장 되는지 확인 용도 -->
-{% for v in parking_list %}
-    {{ v.date }}
-{% endfor %}
 
 
 <!-- 추후 js 파일로 따로 저장 -->

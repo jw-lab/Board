@@ -216,22 +216,34 @@ function colorChange(){
 };
 //color select 선택 시 icon color 변경 종료
 
-//lot click시 background color 변경 시작
+// lot click시 background color 변경 시작
 let lots = document.getElementsByClassName("lot");
-
+let clearLot = document.querySelectorAll(".lot");
 
 function backcolorChange(){
+    
+    
     if (this.classList.contains("lot-active")) {
         this.classList.replace("lot-active", "lot");
     } else {
         this.classList.replace("lot", "lot-active");
     };
+
+    // for (let i = 0 ; i < lots.length; i++){
+    //     lots[i].style.backgroundColor = "white";
+    // }
 };
 
+// function clearcolorChange(){
+//     clearLot.classList.add("clear");
+    
+// }
+
 for (let i = 0 ; i < lots.length; i++){
+    // clearLot[i].addEventListener("click", clearcolorChange);
     lots[i].addEventListener("click", backcolorChange);
 };
-//lot click시 background color 변경 종료
+// lot click시 background color 변경 종료
 
 
 //유효성 검사 관련 시작

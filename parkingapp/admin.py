@@ -5,6 +5,6 @@ from .models import *
 
 @admin.register(Parking)
 class ParkingAdmin(admin.ModelAdmin):
-    list_display = ('model','name','company','color','plate','mobile','lot','date')
+    list_display = ('id','model','name','company','color','plate','mobile','lot','date')
 
 

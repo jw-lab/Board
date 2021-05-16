@@ -151,7 +151,7 @@
                             
                             <div>
                                 <label for="mobile">Mobile: </label>
-                                    {{ form.mobile }}                            
+                                    {{ form.mobile }}                          
                             </div>
                             
                             <div>
@@ -217,36 +217,38 @@ function colorChange(){
 //color select 선택 시 icon color 변경 종료
 
 // lot click시 background color 변경 시작
-let lots = document.getElementsByClassName("lot");
-let clearLot = document.querySelectorAll(".lot");
+let lots = document.querySelectorAll(".lot");
 
 function backcolorChange(){
-    
-    
-    if (this.classList.contains("lot-active")) {
-        this.classList.replace("lot-active", "lot");
-    } else {
+    lots.forEach((el) => el.className = "lot");
+
+    if (this.className ="lot") {
         this.classList.replace("lot", "lot-active");
     };
-
-    // for (let i = 0 ; i < lots.length; i++){
-    //     lots[i].style.backgroundColor = "white";
-    // }
 };
 
-// function clearcolorChange(){
-//     clearLot.classList.add("clear");
-    
-// }
-
-for (let i = 0 ; i < lots.length; i++){
-    // clearLot[i].addEventListener("click", clearcolorChange);
-    lots[i].addEventListener("click", backcolorChange);
-};
+lots.forEach((e) => {e.addEventListener("click", backcolorChange)});
 // lot click시 background color 변경 종료
 
 
 //유효성 검사 관련 시작
+let phoneInput = document.getElementById("numbers");
+let submitButton = document.getElementById("park");
+
+function phoneValidation(){
+    // var regEx = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+    var regEx = /^(\d{3})-(\d{4})-(\d{4})$/;
+
+    if (phoneInput.value.match(regEx)) {
+        return true;
+    } else {
+        alert('Please check your numbers(010-1234-5678)');
+        event.preventDefault();
+    }
+};
+
+submitButton.addEventListener("click", phoneValidation);
+//유효성 검사 관련 종료
 
 </script>
 {% endblock %}

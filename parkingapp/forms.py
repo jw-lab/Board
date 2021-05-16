@@ -27,7 +27,7 @@ class ParkingForm(ModelForm):
             'name' : forms.TextInput(attrs={'placeholder': 'Please enter your name'} ),
             'company' : forms.TextInput(attrs={'placeholder': 'Please enter your company'} ),
             'plate' : forms.TextInput(attrs={'placeholder': 'Please enter your car plate'} ),
-            'mobile' : forms.TextInput(attrs={'placeholder': 'Please enter your phone number'} ),
+            'mobile' : forms.TextInput(attrs={'placeholder': '010-1234-5678', 'id': 'numbers'}),
             'lot' : forms.TextInput(attrs={'placeholder': 'Please enter your parking lot'} ),
             'color' : forms.Select(choices=COLOR_CHOICES, attrs={'onchange' : "colorChange(this.value);"})
         }

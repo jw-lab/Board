@@ -9,31 +9,18 @@ from parkingapp.forms import ParkingForm
 
 
 def parking_view(request):
-    
-
     if request.method == 'POST':
-        parking = Parking()
-        
-        parking_form = ParkingForm(request.POST)
-
-        if parking_form.is_valid():
-            parking.model = parking_form.cleaned_data['model']
-            parking.name = parking_form.cleaned_data['name']
-            parking.company = parking_form.cleaned_data['company']
-            parking.plate = parking_form.cleaned_data['plate']
-            parking.color = parking_form.cleaned_data['color']
-            parking.lot = parking_form.cleaned_data['lot']
-            parking.mobile = parking_form.cleaned_data['mobile']
-            parking.save()
+        form = ParkingForm(request.POST)
+        if form.is_valid():
+            form.save()
 
             return HttpResponseRedirect('/')
-
     else:
         parking_date = Parking.objects.last()
-        parking_form = ParkingForm()
+        form = ParkingForm()
     
     context = {
-        'form' : parking_form,
+        'form' : form,
         'parking_date' : parking_date,
     }
 

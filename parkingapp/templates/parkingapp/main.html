@@ -16,103 +16,23 @@
     <div class="rightLayout">
         <div class="parkinglot">
             <div class="lotA">
-                <p class="lot">A1</p>
-                <p class="lot">A2</p>
-                <p class="lot">A3</p>
+                <p class="lot" onclick="changeValue(this)">A1</p>
+                <p class="lot" onclick="changeValue(this)">A2</p>
+                <p class="lot" onclick="changeValue(this)">A3</p>
             </div>
             <div class="lotB">
-                <p class="lot">B1</p>
-                <P class="lot">B2</P>
-                <p class="lot">B3</p>
+                <p class="lot" onclick="changeValue(this)">B1</p>
+                <P class="lot" onclick="changeValue(this)">B2</P>
+                <p class="lot" onclick="changeValue(this)">B3</p>
             </div>
             <div class="lotC">
-                <p class="lot">C1</p>
-                <P class="lot">C2</P>
-                <p class="lot">C3</p>
+                <p class="lot" onclick="changeValue(this)">C1</p>
+                <P class="lot" onclick="changeValue(this)">C2</P>
+                <p class="lot" onclick="changeValue(this)">C3</p>
             </div>
         </div>
 
-        <!-- <div class="bottomLayout">
-            <form action="" method="POST" id="myForm">
-                {% csrf_token %}
-                <div class="entrance">
-                    <div class="container">
-                        <section class="carinfo">
-                            <div>
-                                <label for="model">Model: </label>
-                                <input type="text" id="model" name="model" placeholder="Please enter your car model">
-                                <span class="model hidden"></span>
-                            </div>
-                           
-                            <div>
-                                <label for="company">Company: </label>
-                                <input type="text" id="company" name="company" placeholder="Please enter your car brand">
-                            </div>
-                       
-    
-                             <div>
-                                <label for="color">Color: </label>
-                                <select name="color" onchange="colorChange()">
-                                    <option value="" selected disabled hidden>Please select your car color</option>
-                                    <option value="white">white</option>
-                                    <option value="black">black</option>
-                                    <option value="gray">gray</option>
-                                    <option value="silver">silver</option>
-                                    <option value="blue">blue</option>
-                                    <option value="red">red</option>
-                                    <option value="green">green</option>
-                                    <option value="gold">gold</option>
-                                    <option value="brown">brown</option>
-                                    <option value="orange">orange</option>
-                                </select>
-                             </div>
-    
-                            <div>
-                                <label for="plate">Plate: </label>
-                                <input type="text" id="plate" name="plate" placeholder="Please enter your car number">
-                            </div>
-    
-                        </section>
-                    
-                        <section class="owner">
-                            <div>
-                                <label for="name">Name: </label>
-                                <input type="text" id="name" name="name" placeholder="Please enter your name">
-                            </div>
-                            
-                            <div>
-                                <label for="mobile">Mobile: </label>
-                                <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number">
-                            </div>
-    
-                            <div>
-                                <label for="date">Date: </label>
-                                <input type="text" id="date" name="date" title="No need to enter" readonly value="{{ date }}">
-                            </div>
-                            
-                            <div>
-                                <label for="lot">Lot: </label>
-                                <input type="text" id="lot" name="lot" placeholder="Please enter where you want to park">
-                            </div>
-                        </section>
-                            
-                        
-                    </div>
         
-                    
-                    <section class="parkButton">
-                        <button type="submit" id="park">Let's park!!!</button>
-                        <span class="submit_icon"><i id="icon" class="fas fa-car-side fa-2x"></i></span>
-                        
-                    </section>
-                </div>
-            </form>
-            
-            
-            <div class="payment">
-                결제관련
-            </div>
-        </div> -->
 
         <div class="bottomLayout">
             <form action="" method="POST" id="myForm">
@@ -187,6 +107,11 @@
 
 <!-- 추후 js 파일로 따로 저장 -->
 <script>
+// lot 클릭시 input tag 안에 값 저장 시작
+function changeValue(a){
+    document.getElementById('lot').value = a.innerHTML;
+}
+// lot 클릭시 input tag 안에 값 저장 종료
 
 // submit시 자동차 회전 시작
 const my_form = document.querySelector("#myForm");

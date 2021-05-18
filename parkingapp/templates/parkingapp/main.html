@@ -175,5 +175,11 @@ function phoneValidation(){
 submitButton.addEventListener("click", phoneValidation);
 //유효성 검사 관련 종료
 
+//카카오톡 로그인 시작
+Kakao.init('34f899c0f51e278e9a2fe1f57086d29c');
+console.log(Kakao.isInitialized());
+
+
+
 </script>
 {% endblock %}
